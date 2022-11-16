@@ -36,16 +36,17 @@ class StoreService {
   ];
 
   /// Récupérer les données depuis la base de données
-  getFireMovies() async {
+  Future<List<dynamic>>getFireMovies() async {
     await db.collection('Movies').get().then((event) {
       print(event.docs);
       for (var doc in event.docs) {
         choice.add({"id": doc.id, "data": doc.data()});
       }
-        print("Documents chargés : ${choice}");
+      print("Documents chargés : ${choice}");
     }).catchError((error) {
       print(error);
     });
+    return choice;
   }
 }
 
