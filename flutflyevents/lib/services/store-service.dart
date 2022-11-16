@@ -11,7 +11,7 @@ class StoreService {
   final db = FirebaseFirestore.instance;
 
   /// Liste dynamique pour l'injection dans la page Movies
-  List<Map<String, dynamic>> choice = [];
+  List<Map<String, dynamic>> dynamicListMovies = [];
 
   /// Liste statique pour l'injection dans la page Movies
   List<Map<String, dynamic>> listMovies = [
@@ -36,17 +36,19 @@ class StoreService {
   ];
 
   /// Récupérer les données depuis la base de données
-  Future<List<dynamic>>getFireMovies() async {
-    await db.collection('Movies').get().then((event) {
-      print(event.docs);
-      for (var doc in event.docs) {
-        choice.add({"id": doc.id, "data": doc.data()});
-      }
-      print("Documents chargés : ${choice}");
-    }).catchError((error) {
-      print(error);
-    });
-    return choice;
+  Future<List<dynamic>> getFireMovies() async {
+    if (dynamicListMovies.isEmpty) {
+      await db.collection('Movies').get().then((event) {
+        print(event.docs);
+        for (var doc in event.docs) {
+          dynamicListMovies.add({"id": doc.id, "data": doc.data()});
+        }
+        print("Documents chargés : ${dynamicListMovies}");
+      }).catchError((error) {
+        print(error);
+      }); 
+    }
+    return dynamicListMovies;
   }
 }
 

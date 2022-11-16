@@ -25,15 +25,15 @@ class _MyListMovie extends State<ListMovie> {
           }
           if (snapshot.hasData) {
             return ListView.builder(
-              itemCount: storeService.listMovies.length,
+              itemCount: storeService.dynamicListMovies.length,
               prototypeItem: ListTile(
-                title: Text(storeService.listMovies[0]['titre']),
+                title: Text(storeService.dynamicListMovies[0]['data']['nom']),
               ),
               itemBuilder: (context, index) {
                 return ListTile(
                   leading:
-                      Image.network(storeService.listMovies[index]['image']),
-                  title: Text(storeService.listMovies[index]['titre']),
+                      Image.network(storeService.dynamicListMovies[index]['data']['image']),
+                  title: Text(storeService.dynamicListMovies[index]['data']['nom']),
                   trailing: const Icon(Icons.arrow_forward_ios),
                 );
               },
