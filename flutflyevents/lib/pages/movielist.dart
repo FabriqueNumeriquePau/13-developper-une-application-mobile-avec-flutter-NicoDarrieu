@@ -17,14 +17,12 @@ class _MyListMovie extends State<ListMovie> {
   @override
   Widget build(BuildContext context) {
     storeService.getFireMovies();
-
     return FutureBuilder(
         future: storeService.getFireMovies(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const CircularProgressIndicator();
           }
-
           if (snapshot.hasData) {
             return ListView.builder(
               itemCount: storeService.listMovies.length,
@@ -41,6 +39,7 @@ class _MyListMovie extends State<ListMovie> {
               },
             );
           }
+          return const Text('No data');
         });
   }
 }
