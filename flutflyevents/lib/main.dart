@@ -1,6 +1,6 @@
-import 'package:flutflyevents/text_section.dart';
-import 'package:flutflyevents/title_section.dart';
+import 'package:flutflyevents/pages/movielist.dart';
 import 'package:flutter/material.dart';
+import 'package:flutflyevents/pages/first.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,14 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    FirstPage(title: '',),
+    ListMovie(title: '',items: [],),
     Text(
       'Index 2: School',
       style: optionStyle,
@@ -72,19 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-	         body: Column(
-           children: [
-            Image.asset(
-               'assets/images/lake.jpg',
-               width: 600,
-               height: 240,
-               fit: BoxFit.cover,
-               ),
-             titleSection,
-             textSection,
-           ],
-	          ), 
-            bottomNavigationBar: BottomNavigationBar(
+	         body: _widgetOptions.elementAt(_selectedIndex),
+           bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
