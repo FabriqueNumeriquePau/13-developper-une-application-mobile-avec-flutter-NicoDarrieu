@@ -1,10 +1,16 @@
 import 'package:flutflyevents/pages/movielist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutflyevents/pages/first.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() async => {
+  WidgetsFlutterBinding.ensureInitialized(),
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      ),
+      runApp(const MyApp())
+    };
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -35,12 +41,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   //get titleSection => null;
-    int _selectedIndex = 0;
+  int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    FirstPage(title: '',),
-    ListMovie(title: '',items: [],),
+    FirstPage(
+      title: '',
+    ),
+    ListMovie(
+      title: '',
+      items: [],
+    ),
     Text(
       'Index 2: School',
       style: optionStyle,
@@ -52,6 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -66,8 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-	         body: _widgetOptions.elementAt(_selectedIndex),
-           bottomNavigationBar: BottomNavigationBar(
+      body: _widgetOptions.elementAt(_selectedIndex),
+      bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
