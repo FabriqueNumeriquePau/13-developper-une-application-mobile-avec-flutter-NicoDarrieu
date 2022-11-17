@@ -42,41 +42,6 @@ class DefaultFirebaseOptions {
         );
     }
   }
+ // delete APIkey
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDkBNq-SMsCNg5H02I0tr4GxVZCVsBID9Q',
-    appId: '1:1053181680710:web:a5b16eaf4554d7dbc6fe47',
-    messagingSenderId: '1053181680710',
-    projectId: 'flutflyevents-ed2d3',
-    authDomain: 'flutflyevents-ed2d3.firebaseapp.com',
-    storageBucket: 'flutflyevents-ed2d3.appspot.com',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCtbdyaDMYq-L-7wzTfzPoC8xdIue1QpVg',
-    appId: '1:1053181680710:android:628dfb1185042f1ac6fe47',
-    messagingSenderId: '1053181680710',
-    projectId: 'flutflyevents-ed2d3',
-    storageBucket: 'flutflyevents-ed2d3.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCy42rUvCJOKF3sRgNikt2MX2tUp7i03bk',
-    appId: '1:1053181680710:ios:8f8ad3ea33de8af3c6fe47',
-    messagingSenderId: '1053181680710',
-    projectId: 'flutflyevents-ed2d3',
-    storageBucket: 'flutflyevents-ed2d3.appspot.com',
-    iosClientId: '1053181680710-4s0f6r55a0rl6ou2u1h9pi01baootfch.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutflyevents',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCy42rUvCJOKF3sRgNikt2MX2tUp7i03bk',
-    appId: '1:1053181680710:ios:8f8ad3ea33de8af3c6fe47',
-    messagingSenderId: '1053181680710',
-    projectId: 'flutflyevents-ed2d3',
-    storageBucket: 'flutflyevents-ed2d3.appspot.com',
-    iosClientId: '1053181680710-4s0f6r55a0rl6ou2u1h9pi01baootfch.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutflyevents',
-  );
 }
