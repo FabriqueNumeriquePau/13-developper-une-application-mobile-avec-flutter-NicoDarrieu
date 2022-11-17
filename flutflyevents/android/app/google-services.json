@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1053181680710",
+    "project_id": "flutflyevents-ed2d3",
+    "storage_bucket": "flutflyevents-ed2d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053181680710:android:628dfb1185042f1ac6fe47",
+        "android_client_info": {
+          "package_name": "com.example.flutflyevents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053181680710-8v9brcul8u56irrv4mm6ifvv6fpr0di1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtbdyaDMYq-L-7wzTfzPoC8xdIue1QpVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053181680710-8v9brcul8u56irrv4mm6ifvv6fpr0di1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

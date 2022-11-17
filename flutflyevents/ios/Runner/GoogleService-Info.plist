@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1053181680710-4s0f6r55a0rl6ou2u1h9pi01baootfch.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1053181680710-4s0f6r55a0rl6ou2u1h9pi01baootfch</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCy42rUvCJOKF3sRgNikt2MX2tUp7i03bk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1053181680710</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.flutflyevents</string>
+	<key>PROJECT_ID</key>
+	<string>flutflyevents-ed2d3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutflyevents-ed2d3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1053181680710:ios:8f8ad3ea33de8af3c6fe47</string>
+</dict>
+</plist>
