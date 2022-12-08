@@ -14,7 +14,7 @@ class StoreService {
   List<Map<String, dynamic>> dynamicListMovies = [];
 
   /// Liste statique pour l'injection dans la page Movies
-  List<Map<String, dynamic>> listMovies = [
+  /* List<Map<String, dynamic>> listMovies = [
     {
       "titre": "John Wick",
       "categorie": "Action",
@@ -33,13 +33,13 @@ class StoreService {
       "image":
           "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E9C42FC150931CED05EFA1EAE4FE82141414FF93C4867DFEB9F075BCDA9559E6/scale?width=1200&aspectRatio=1.78&format=jpeg",
     },
-  ];
+  ]; */
 
   /// Récupérer les données depuis la base de données
   Future<List<dynamic>> getFireMovies() async {
     if (dynamicListMovies.isEmpty) {
       await db.collection('Movies').get().then((event) {
-        print(event.docs);
+        print("event.docs : ${event.docs}" );
         for (var doc in event.docs) {
           dynamicListMovies.add({"id": doc.id, "data": doc.data()});
         }

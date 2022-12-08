@@ -13,14 +13,14 @@ Widget titleSection = Container(
             Container(
               padding: const EdgeInsets.only(bottom: 8),
               child: const Text(
-                'Example Lake Campground',
+                'Black Panther Wakanda Forever',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             Text(
-              'Kandersteg, Switzerland',
+              'Ryan Coogler, USA',
               style: TextStyle(
                 color: Colors.grey[500],
               ),

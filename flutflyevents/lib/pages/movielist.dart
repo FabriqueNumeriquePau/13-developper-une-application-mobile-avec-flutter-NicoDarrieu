@@ -1,3 +1,4 @@
+import 'package:flutflyevents/pages/details.dart';
 import 'package:flutflyevents/services/store-service.dart';
 import 'package:flutter/material.dart';
 
@@ -31,10 +32,25 @@ class _MyListMovie extends State<ListMovie> {
               ),
               itemBuilder: (context, index) {
                 return ListTile(
-                  leading:
-                      Image.network(storeService.dynamicListMovies[index]['data']['image']),
-                  title: Text(storeService.dynamicListMovies[index]['data']['nom']),
-                  trailing: const Icon(Icons.arrow_forward_ios),
+                  leading: Image.network(
+                      storeService.dynamicListMovies[index]['data']['image']),
+                  title: Text(
+                      storeService.dynamicListMovies[index]['data']['nom']),
+                  subtitle: Text(storeService.dynamicListMovies[index]['data']
+                      ['categorie']),
+                  trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+                    IconButton(
+                        onPressed: () {}, icon: const Icon(Icons.heart_broken)),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const DetailPage(title: '',)),
+                          );
+                        },
+                        icon: const Icon(Icons.arrow_forward_ios)),
+                  ]),
                 );
               },
             );

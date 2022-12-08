@@ -2,18 +2,18 @@ import 'package:flutflyevents/text_section.dart';
 import 'package:flutflyevents/title_section.dart';
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatefulWidget {
-  const FirstPage({super.key, required this.title});
+class DetailPage extends StatefulWidget {
+  const DetailPage({super.key, required this.title});
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
   // how it looks.
   final String title;
 
   @override
-  State<FirstPage> createState() => _MyFirstPageState();
+  State<DetailPage> createState() => _DetailPageState();
 }
 
-class _MyFirstPageState extends State<FirstPage> {
+class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -3,12 +3,7 @@ import 'package:flutter/material.dart';
 Widget textSection = const Padding(
   padding: EdgeInsets.all(32),
   child: Text(
-    'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
-    'Alps. Situated 1,578 meters above sea level, it is one of the '
-    'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
-    'half-hour walk through pastures and pine forest, leads you to the '
-    'lake, which warms to 20 degrees Celsius in the summer. Activities '
-    'enjoyed here include rowing, and riding the summer toboggan run.',
+    "Après la mort du roi T'Challa alias Black Panther, le Wakanda est en deuil et Ramonda a repris le siège royal avec l'aide de sa fille Shuri, des Dora Milaje et de M'Baku. Un an plus tard, alors que les regards des puissances internationales se montrent méfiantes envers le Wakanda qui régule l'accès au vibranium, un filon du précieux métal est repéré dans les fonds marins grâce à un détecteur encore en test. Namor, homme amphibie et souverain du royaume sous-marin de Talocan, menace de déclarer la guerre à la nation africaine, et Ramonda, Shuri et Okoye vont devoir compter sur leurs quelques alliés pour éviter un conflit mondial.",
     softWrap: true,
   ),
 );
