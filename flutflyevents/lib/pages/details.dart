@@ -1,6 +1,5 @@
-import 'package:flutflyevents/text_section.dart';
-import 'package:flutflyevents/title_section.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key, required this.title});
@@ -16,17 +15,16 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          'assets/images/black.webp',
-          width: 600,
-          height: 240,
-          fit: BoxFit.cover,
-        ),
-        titleSection,
-        textSection,
-      ],
-    );
+    return Scaffold(
+        body: Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          IconButton(onPressed: () {}, icon: const Icon(Icons.call)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.message)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.mail)),
+        ],
+      ),
+    ));
   }
 }
